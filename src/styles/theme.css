@@ -1,0 +1,316 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* ========================================
+     BORDER FINTECH BRAND COLOR SYSTEM
+     Premium, Global, Trustworthy, Modern
+     ======================================== */
+  
+  /* PRIMARY BRAND COLORS */
+  --border-navy: #0B1C2D;           /* Core brand - trust, authority */
+  --border-midnight: #071422;        /* Premium backgrounds */
+  --border-blue: #1A4ED8;           /* Primary CTA, actions */
+  
+  /* SECONDARY BRAND COLORS */
+  --border-green: #00C38B;          /* Success, growth, money */
+  --border-gold: #C9A227;           /* Premium, enterprise, highlights */
+  --border-cloud: #E6EDF5;          /* Soft backgrounds, cards */
+  
+  /* NEUTRAL SYSTEM */
+  --border-charcoal: #1F2933;       /* Primary text dark */
+  --border-graphite: #4B5563;       /* Secondary text */
+  --border-mist: #9CA3AF;           /* Labels, placeholders */
+  --border-soft-white: #F9FBFD;     /* Main background */
+  --border-white: #FFFFFF;          /* Pure white */
+  
+  /* STATUS COLORS */
+  --border-success: #16A34A;        /* Success states */
+  --border-warning: #F59E0B;        /* Warning states */
+  --border-error: #DC2626;          /* Error states */
+  --border-info: #2563EB;           /* Info states */
+  
+  /* GRADIENT COMBINATIONS */
+  --gradient-primary: linear-gradient(135deg, #1A4ED8 0%, #6366F1 100%);
+  --gradient-premium: linear-gradient(135deg, #1A4ED8 0%, #8B5CF6 100%);
+  --gradient-success: linear-gradient(135deg, #00C38B 0%, #10B981 100%);
+  --gradient-gold: linear-gradient(135deg, #C9A227 0%, #FCD34D 100%);
+  
+  /* OPACITY VARIANTS */
+  --border-blue-10: rgba(26, 78, 216, 0.1);
+  --border-blue-20: rgba(26, 78, 216, 0.2);
+  --border-blue-50: rgba(26, 78, 216, 0.5);
+  
+  --border-green-10: rgba(0, 195, 139, 0.1);
+  --border-green-20: rgba(0, 195, 139, 0.2);
+  
+  --border-gold-10: rgba(201, 162, 39, 0.1);
+  --border-gold-20: rgba(201, 162, 39, 0.2);
+  
+  /* SHADCN UI COMPATIBLE TOKENS */
+  --font-size: 16px;
+  --background: var(--border-soft-white);
+  --foreground: var(--border-charcoal);
+  --card: var(--border-white);
+  --card-foreground: var(--border-charcoal);
+  --popover: var(--border-white);
+  --popover-foreground: var(--border-charcoal);
+  --primary: var(--border-blue);
+  --primary-foreground: var(--border-white);
+  --secondary: var(--border-cloud);
+  --secondary-foreground: var(--border-navy);
+  --muted: var(--border-cloud);
+  --muted-foreground: var(--border-graphite);
+  --accent: var(--border-blue-10);
+  --accent-foreground: var(--border-blue);
+  --destructive: var(--border-error);
+  --destructive-foreground: var(--border-white);
+  --border: rgba(31, 41, 51, 0.1);
+  --input: transparent;
+  --input-background: var(--border-cloud);
+  --switch-background: var(--border-mist);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: var(--border-blue);
+  
+  /* CHART COLORS */
+  --chart-1: var(--border-blue);
+  --chart-2: var(--border-green);
+  --chart-3: var(--border-gold);
+  --chart-4: #8B5CF6;
+  --chart-5: #EC4899;
+  
+  --radius: 0.625rem;
+  
+  /* SIDEBAR */
+  --sidebar: var(--border-white);
+  --sidebar-foreground: var(--border-charcoal);
+  --sidebar-primary: var(--border-blue);
+  --sidebar-primary-foreground: var(--border-white);
+  --sidebar-accent: var(--border-cloud);
+  --sidebar-accent-foreground: var(--border-navy);
+  --sidebar-border: rgba(31, 41, 51, 0.1);
+  --sidebar-ring: var(--border-blue);
+}
+
+.dark {
+  /* DARK MODE - Premium fintech dark theme */
+  --background: var(--border-midnight);
+  --foreground: var(--border-soft-white);
+  --card: var(--border-navy);
+  --card-foreground: var(--border-soft-white);
+  --popover: var(--border-navy);
+  --popover-foreground: var(--border-soft-white);
+  --primary: var(--border-blue);
+  --primary-foreground: var(--border-white);
+  --secondary: rgba(26, 78, 216, 0.15);
+  --secondary-foreground: var(--border-cloud);
+  --muted: rgba(255, 255, 255, 0.05);
+  --muted-foreground: var(--border-mist);
+  --accent: var(--border-blue-20);
+  --accent-foreground: #60A5FA;
+  --destructive: var(--border-error);
+  --destructive-foreground: var(--border-white);
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.05);
+  --ring: var(--border-blue);
+  
+  /* CHART COLORS - Dark mode optimized */
+  --chart-1: #60A5FA;
+  --chart-2: #34D399;
+  --chart-3: #FBBF24;
+  --chart-4: #A78BFA;
+  --chart-5: #F472B6;
+  
+  /* SIDEBAR - Dark mode */
+  --sidebar: #0A1628;
+  --sidebar-foreground: var(--border-soft-white);
+  --sidebar-primary: var(--border-blue);
+  --sidebar-primary-foreground: var(--border-white);
+  --sidebar-accent: rgba(26, 78, 216, 0.1);
+  --sidebar-accent-foreground: #60A5FA;
+  --sidebar-border: rgba(255, 255, 255, 0.1);
+  --sidebar-ring: var(--border-blue);
+}
+
+@theme inline {
+  /* Border Brand Color Classes */
+  --color-border-navy: var(--border-navy);
+  --color-border-midnight: var(--border-midnight);
+  --color-border-blue: var(--border-blue);
+  --color-border-green: var(--border-green);
+  --color-border-gold: var(--border-gold);
+  --color-border-cloud: var(--border-cloud);
+  --color-border-charcoal: var(--border-charcoal);
+  --color-border-graphite: var(--border-graphite);
+  --color-border-mist: var(--border-mist);
+  --color-border-soft-white: var(--border-soft-white);
+  --color-border-white: var(--border-white);
+  --color-border-success: var(--border-success);
+  --color-border-warning: var(--border-warning);
+  --color-border-error: var(--border-error);
+  --color-border-info: var(--border-info);
+  
+  /* Shadcn UI compatibility */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /**
+  * Default typography styles for HTML elements (h1-h4, p, label, button, input).
+  * These are in @layer base, so Tailwind utility classes (like text-sm, text-lg) automatically override them.
+  */
+
+  html {
+    font-size: var(--font-size);
+  }
+
+  h1 {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h2 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h3 {
+    font-size: var(--text-lg);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  h4 {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  label {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  button {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-medium);
+    line-height: 1.5;
+  }
+
+  input {
+    font-size: var(--text-base);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.5;
+  }
+}
+
+/* BORDER BRAND UTILITY CLASSES */
+@layer utilities {
+  /* Gradient Backgrounds */
+  .bg-gradient-border-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .bg-gradient-border-premium {
+    background: var(--gradient-premium);
+  }
+  
+  .bg-gradient-border-success {
+    background: var(--gradient-success);
+  }
+  
+  .bg-gradient-border-gold {
+    background: var(--gradient-gold);
+  }
+  
+  /* Text Gradients */
+  .text-gradient-border-primary {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .text-gradient-border-premium {
+    background: var(--gradient-premium);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Premium Glass Effect */
+  .glass-border {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Dark Glass Effect */
+  .glass-border-dark {
+    background: rgba(11, 28, 45, 0.8);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Premium Shadow */
+  .shadow-border-premium {
+    box-shadow: 0 10px 40px rgba(26, 78, 216, 0.15);
+  }
+  
+  .shadow-border-gold {
+    box-shadow: 0 10px 40px rgba(201, 162, 39, 0.15);
+  }
+}
