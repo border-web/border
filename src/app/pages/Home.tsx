@@ -79,7 +79,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              {['USD', 'NGN', 'GBP', 'EUR', 'CAD', 'ZAR'].map((currency, i) => (
+              {['USD', 'NGN', 'GBP', 'EUR', 'CAD', 'CNY'].map((currency, i) => (
                 <div 
                   key={currency}
                   className="px-4 py-2 glass-border rounded-full text-[#E6EDF5] font-medium"
@@ -164,7 +164,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { value: '150+', label: 'Countries supported' },
+              { value: '81+', label: 'Countries supported' },
               { value: '$5B+', label: 'Transaction volume' },
               { value: '1M+', label: 'Active users' },
               { value: '99.9%', label: 'Uptime SLA' },
@@ -239,7 +239,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-50">
-            {['Circle', '9PSB', 'Visa', 'Mastercard', 'SWIFT', 'NIBSS'].map((partner, index) => (
+            {['Visa', 'Mastercard', 'SWIFT',].map((partner, index) => (
               <div 
                 key={index} 
                 className="flex items-center justify-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-all"
