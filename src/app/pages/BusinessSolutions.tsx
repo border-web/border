@@ -90,7 +90,7 @@ export default function BusinessSolutions() {
               {
                 icon: Globe2,
                 title: 'Cross-border Payments',
-                description: 'Send and receive payments to suppliers and partners in 150+ countries',
+                description: 'Send and receive payments to suppliers and partners in 81+ countries',
                 features: ['Instant settlements', 'Transparent fees', 'Batch processing']
               },
               {
