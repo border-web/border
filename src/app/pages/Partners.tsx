@@ -183,7 +183,7 @@ export default function Partners() {
                 {[
                   {
                     title: 'Market Access',
-                    description: 'Reach millions of users across 150+ countries'
+                    description: 'Reach millions of users across 81+ countries'
                   },
                   {
                     title: 'Revenue Growth',
@@ -232,7 +232,7 @@ export default function Partners() {
                   {[
                     { value: '200+', label: 'Active Partners' },
                     { value: '$5B+', label: 'Partner Volume' },
-                    { value: '150+', label: 'Countries' },
+                    { value: '81+', label: 'Countries' },
                     { value: '99.9%', label: 'Uptime SLA' }
                   ].map((stat, index) => (
                     <div key={index}>
