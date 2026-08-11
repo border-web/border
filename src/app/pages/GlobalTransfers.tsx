@@ -16,7 +16,7 @@ export default function GlobalTransfers() {
             >
               <h1 className="text-5xl md:text-6xl font-bold mb-6">Global Transfers</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Send money to 150+ countries with transparent fees, real-time exchange rates, and fast settlement
+                Send money to 81+ countries with transparent fees, real-time exchange rates, and fast settlement
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <Link 
@@ -64,7 +64,7 @@ export default function GlobalTransfers() {
               },
               {
                 icon: Globe,
-                title: '150+ Countries',
+                title: '81+ Countries',
                 description: 'Send to almost anywhere in the world'
               },
               {
@@ -150,7 +150,7 @@ export default function GlobalTransfers() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Send Money Anywhere</h2>
-            <p className="text-xl text-gray-400">We support transfers to 150+ countries</p>
+            <p className="text-xl text-gray-400">We support transfers to 81+ countries</p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
@@ -219,7 +219,7 @@ export default function GlobalTransfers() {
                 <p className="text-gray-400">Competitive transfer fees on most corridors</p>
               </div>
               <div className="p-6 bg-gradient-to-br from-pink-900/20 to-blue-900/20 border border-white/10 rounded-xl">
-                <h3 className="text-2xl font-bold mb-2">150+ countries</h3>
+                <h3 className="text-2xl font-bold mb-2">81+ countries</h3>
                 <p className="text-gray-400">Global coverage across all continents</p>
               </div>
             </div>
