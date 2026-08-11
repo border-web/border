@@ -1,21 +1,23 @@
 import { Link } from 'react-router';
 import { motion } from 'motion/react';
-import { 
-  Globe, 
-  Shield, 
-  Zap, 
-  CreditCard, 
-  ArrowRight, 
-  CheckCircle, 
-  Users, 
+import {
+  Globe,
+  Shield,
+  Zap,
+  CreditCard,
+  ArrowRight,
+  CheckCircle,
+  Users,
   TrendingUp,
   Lock,
   Smartphone,
   Building,
   Code
 } from 'lucide-react';
+import { useApp } from '../context/AppContext';
 
 export default function Home() {
+  const { openGetStarted, openDownloadApp } = useApp();
   return (
     <div className="w-full">
       {/* Hero Section */}
@@ -48,24 +50,20 @@ export default function Home() {
               Global money movement, multi-currency wallets, secure transfers, and enterprise-grade infrastructure
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <a 
-                href="https://app.border.com.ng" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <button
+                onClick={openGetStarted}
                 className="px-8 py-4 bg-gradient-border-primary text-white rounded-lg hover:shadow-border-premium transition-all text-lg font-semibold"
               >
                 Get Started
-              </a>
-              <a 
-                href="https://app.border.com.ng" 
-                target="_blank"
-                rel="noopener noreferrer"
+              </button>
+              <button
+                onClick={openDownloadApp}
                 className="px-8 py-4 glass-border text-white rounded-lg hover:bg-white/20 transition-all text-lg font-semibold"
               >
                 Download App
-              </a>
-              <Link 
-                to="/partners" 
+              </button>
+              <Link
+                to="/partners"
                 className="px-8 py-4 border border-white/30 text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold"
               >
                 Partner with Border
@@ -79,7 +77,7 @@ export default function Home() {
               animate={{ opacity: 1 }}
               transition={{ delay: 0.5 }}
             >
-              {['USD', 'NGN', 'GBP', 'EUR', 'CAD', 'CNY'].map((currency, i) => (
+              {['USD', 'NGN', 'GBP', 'EUR', 'CAD', 'ZAR'].map((currency, i) => (
                 <div 
                   key={currency}
                   className="px-4 py-2 glass-border rounded-full text-[#E6EDF5] font-medium"
@@ -162,11 +160,9 @@ export default function Home() {
       {/* Stats Section */}
       <section className="py-20 bg-gradient-to-b from-black to-zinc-950">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-2 gap-8 max-w-lg mx-auto">
             {[
               { value: '81+', label: 'Countries supported' },
-              { value: '$5B+', label: 'Transaction volume' },
-              { value: '1M+', label: 'Active users' },
               { value: '99.9%', label: 'Uptime SLA' },
             ].map((stat, index) => (
               <motion.div
@@ -239,7 +235,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-50">
-            {['Visa', 'Mastercard', 'SWIFT',].map((partner, index) => (
+            {['Circle', '9PSB', 'Visa', 'Mastercard', 'SWIFT', 'NIBSS'].map((partner, index) => (
               <div 
                 key={index} 
                 className="flex items-center justify-center p-4 bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg hover:bg-white/10 transition-all"
@@ -324,14 +320,12 @@ export default function Home() {
             Join thousands of businesses and individuals moving money across borders with Border
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://app.border.com.ng" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openGetStarted}
               className="px-8 py-4 bg-white text-blue-900 rounded-lg hover:bg-gray-100 transition-all text-lg font-semibold"
             >
               Get Started Now
-            </a>
+            </button>
             <Link 
               to="/contact" 
               className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold"
