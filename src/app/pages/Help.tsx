@@ -215,7 +215,7 @@ export default function Help() {
               },
               {
                 question: 'What currencies can I hold in my wallet?',
-                answer: 'Border supports 150+ currencies including USD, EUR, GBP, NGN, KES, ZAR, CAD, and many more.'
+                answer: 'Border supports 81+ currencies including USD, EUR, GBP, NGN, KES, ZAR, CAD, and many more.'
               }
             ].map((faq, index) => (
               <motion.div
