@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { Link } from 'react-router';
+import { useApp } from '../context/AppContext';
 import { 
   Globe, 
   CreditCard, 
@@ -13,6 +14,7 @@ import {
 } from 'lucide-react';
 
 export default function Products() {
+  const { openGetStarted } = useApp();
   return (
     <div className="w-full">
       {/* Hero */}
@@ -33,7 +35,7 @@ export default function Products() {
               {
                 icon: Globe,
                 title: 'Global Transfers',
-                description: 'Send money to 150+ countries with transparent fees and real-time exchange rates',
+                description: 'Send money to 81+ countries with transparent fees and real-time exchange rates',
                 link: '/products/global-transfers',
                 features: [
                   'Bank transfers',
@@ -175,7 +177,7 @@ export default function Products() {
               },
               {
                 title: 'Global Coverage',
-                description: '150+ countries, multiple currencies, and growing payment corridors'
+                description: '81+ countries, multiple currencies, and growing payment corridors'
               }
             ].map((feature, index) => (
               <motion.div
@@ -202,14 +204,12 @@ export default function Products() {
             Get started with Border today
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a 
-              href="https://app.border.com.ng" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openGetStarted}
               className="px-8 py-4 bg-white text-blue-900 rounded-lg hover:bg-gray-100 transition-all text-lg font-semibold"
             >
               Get Started
-            </a>
+            </button>
             <Link 
               to="/pricing" 
               className="px-8 py-4 border-2 border-white text-white rounded-lg hover:bg-white/10 transition-all text-lg font-semibold"
