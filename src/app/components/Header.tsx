@@ -2,10 +2,12 @@ import { Link } from 'react-router';
 import { useState } from 'react';
 import { Menu, X, ChevronDown } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+import { useApp } from '../context/AppContext';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productsOpen, setProductsOpen] = useState(false);
+  const { openGetStarted } = useApp();
 
   return (
     <header className="sticky top-0 z-50 glass-border-dark">
@@ -81,14 +83,12 @@ export default function Header() {
             >
               Login
             </a>
-            <a 
-              href="https://app.border.com.ng" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={openGetStarted}
               className="px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm rounded-lg hover:from-blue-600 hover:to-purple-600 transition-all"
             >
               Get Started
-            </a>
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -167,15 +167,12 @@ export default function Header() {
                 >
                   Login
                 </a>
-                <a 
-                  href="https://app.border.com.ng" 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block mx-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm text-center rounded-lg"
-                  onClick={() => setMobileMenuOpen(false)}
+                <button
+                  onClick={() => { setMobileMenuOpen(false); openGetStarted(); }}
+                  className="block mx-4 px-4 py-2 bg-gradient-to-r from-blue-500 to-purple-500 text-white text-sm text-center rounded-lg w-[calc(100%-2rem)]"
                 >
                   Get Started
-                </a>
+                </button>
               </div>
             </motion.div>
           )}
