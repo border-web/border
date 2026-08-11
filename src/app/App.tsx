@@ -1,4 +1,5 @@
-import { BrowserRouter, Routes, Route } from 'react-router';
+import { HashRouter as BrowserRouter, Routes, Route } from 'react-router';
+import { AppProvider } from './context/AppContext';
 import Layout from './components/Layout';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -21,6 +22,7 @@ import Legal from './pages/Legal';
 
 export default function App() {
   return (
+    <AppProvider>
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -45,5 +47,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
+    </AppProvider>
   );
 }
