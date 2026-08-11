@@ -68,7 +68,7 @@ export default function Careers() {
               {
                 icon: Globe,
                 title: 'Global Impact',
-                description: 'Build products used by millions across 150+ countries'
+                description: 'Build products used by millions across 81+ countries'
               },
               {
                 icon: TrendingUp,
