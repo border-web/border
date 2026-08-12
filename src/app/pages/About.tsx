@@ -162,7 +162,7 @@ export default function About() {
               },
               {
                 name: 'Meshach Thomas',
-                role: 'Co-Founder & Growth Lead',
+                role: 'Growth Lead',
                 bio: 'Driving growth strategy and market expansion across global markets.'
               },
               {
